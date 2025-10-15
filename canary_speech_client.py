@@ -14,6 +14,7 @@ import argparse
 import json
 import sys
 import time
+import os
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Dict, Optional, Tuple
@@ -484,7 +485,6 @@ Environment variables (alternative to command-line args):
     args = parser.parse_args()
 
     # Get credentials from args or environment
-    import os
     api_key = args.api_key or os.environ.get('CANARY_API_KEY')
     project_id = args.project_id or os.environ.get('CANARY_PROJECT_ID')
     survey_code = args.survey_code or os.environ.get('CANARY_SURVEY_CODE')
