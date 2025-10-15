@@ -68,7 +68,7 @@ python canary_speech_client.py \
 Set up your credentials once:
 
 ```bash
-export CANARY_API_KEY="1A2B3C:YWJjZGVmZ2hhYmNkZWZnaGFiY2RlZmdoYWJjZGVmZ2hhYmNk"
+export CANARY_API_KEY="your-api-key"
 export CANARY_PROJECT_ID="your-project-id"
 export CANARY_SURVEY_CODE="your-survey-code"
 export CANARY_REGION="eus"  # Optional, defaults to eus
@@ -78,4 +78,11 @@ Then run with just the audio file and subject name:
 
 ```bash
 python canary_speech_client.py --audio-file recording.wav --subject-name "Test_Subject"
+```
+
+### Unit Tests
+
+To run the unit tests:
+```bash
+python -m unittest test_canary_client.py
 ```
